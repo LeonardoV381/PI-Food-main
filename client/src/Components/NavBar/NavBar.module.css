@@ -1,0 +1,9 @@
+.mainContainer {
+ display : flex;
+ flex-direction: row;
+ background-color : #808080;
+ font-size: 60px;
+ justify-content: space-around;
+ border-radius : 15px;
+ border : 1px solid black;
+}
