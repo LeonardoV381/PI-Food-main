@@ -14,22 +14,27 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false, 
     },
+
+    summary: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    health: {
+      type: DataTypes.SMALLINT,
+      allowNull: false,
+    },
+    steps: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+   
     image: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    resumenPlato: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    nivelSaludable: {
-      type: DataTypes.SMALLINT,
-      allowNull: false,
-    },
-    pasoAPaso: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
+   
+    
+    
     
    
   },

@@ -18,7 +18,7 @@
 }
 
 
- .nombre{
+ .name{
    overflow: hidden;
    text-align: center;
    width: 500px;
@@ -38,7 +38,7 @@
 
 }
 
-.diet{
+.diets{
      align-items: center;
      text-align: center;
      overflow: hidden;
@@ -46,10 +46,26 @@
      font-size: 30px;
      color: rgb(13, 108, 21);
      text-shadow: 3px 6px 5px rgb(14, 16, 14);
-     margin-left: 20px;
+     margin-left: 35px;
      border: 3px solid black;
      background-color: rgb(57, 69, 65);
      border-style: dashed;
+     list-style-type: none;
+}
+
+.dietC{
+   align-items: center;
+   text-align: center;
+   overflow: hidden;
+   width: 540px;
+   font-size: 30px;
+   color: rgb(13, 108, 21);
+   text-shadow: 3px 6px 5px rgb(14, 16, 14);
+   margin-left: 0px;
+   border: 3px solid black;
+   background-color: rgb(57, 69, 65);
+   border-style: dashed;
+   list-style-type: none;
 }
 
 .imgP {

@@ -10,8 +10,8 @@ const cleanArray = (arr) =>{
             id: elem.id,
             name: elem.title,
             image: elem.image,
-            resumenPlato : elem.summary,
-            healthScore : elem.healthScore,
+            summary : elem.summary,
+            health : elem.healthScore,
             steps: [...elem.analyzedInstructions],
             diets: elem.diets
         };
@@ -19,7 +19,7 @@ const cleanArray = (arr) =>{
     return clean;
 };
 
-const createRecipe = async( name, imagen, resumenPlato, nivelSaludable, pasoAPaso) => await Recipe.create({ name, imagen, resumenPlato, nivelSaludable, pasoAPaso});
+const createRecipe = async( name, summary, health, steps, image, newDiets) => await Recipe.create({ name, summary, health, steps, image, newDiets});
 
 
 const getRecipeById = async(idRecipe, origen) =>  {
@@ -30,6 +30,7 @@ const getRecipeById = async(idRecipe, origen) =>  {
      
     : 
     await Recipe.findByPk(idRecipe); //búsqueda en base de datos por la clave primaria 
+    
     return recipe;
 };
 
@@ -43,8 +44,9 @@ const getAllRecipes = async (recipe) => {
 
     const apiRecipesAllRaw = 
     (
-        await axios.get(`https://api.spoonacular.com/recipes/complexSearch?${apiKey}&addRecipeInformation=true&number=100`)).data;
+        await axios.get("https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5")).data;
 
+        // https://api.spoonacular.com/recipes/complexSearch?${apiKey}&addRecipeInformation=true&number=100
         const apiRecipesAll = cleanArray(apiRecipesAllRaw.results);
 
 

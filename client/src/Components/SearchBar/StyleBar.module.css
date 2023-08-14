@@ -1,0 +1,15 @@
+.barra{
+    margin-top: 70px;
+    color: brown;
+    font-size: 50px;
+    border-radius: 20px;
+}
+
+.button{
+  color: red;
+  font-size: 50px;
+  border-radius: 20px;
+  background-color: blue;
+  cursor : pointer;
+  
+}

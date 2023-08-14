@@ -1,9 +1,37 @@
 .mainContainer {
  display : flex;
  flex-direction: row;
- background-color : #808080;
  font-size: 60px;
- justify-content: space-around;
+ justify-content: flex-end;
  border-radius : 15px;
  border : 1px solid black;
+ border-style: groove;
+}
+
+.isActive{
+   
+    color:rgb(218, 98, 29);
+    background-color: rgb(223, 201, 173);
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.activeDisable{
+    color: blue;
+    background-color: rgb(223, 201, 173)
+}
+
+.list{
+   
+    border-radius: 30px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.margin{
+    /* list-style: none; */
+     display: flex;
+     margin-right: 30px;
+     justify-content: center;
+     border-style: groove;
 }

@@ -6,17 +6,18 @@ const Recipe = require("../models/Recipe");
 
 const getRecipesHandler =  async (req, res) => {
 
-    const recipe  = req.query.name;
+    const recipes  = req.query.name;
     try {
-        const results = recipe ? await searchRecipesByName(recipe) : await getAllRecipes();
+        const results = recipes ? await searchRecipesByName(recipes) : await getAllRecipes();
          res.status(200).json(results);
+         console.log(results);
     } catch (error) {
         res.status(404).json({error: "No hallado"});
     }
 }
 
 const getRecipeHandlerById = async (req, res) => {
-    const { idRecipe } = req.params; //toma el valor de la propiedad id
+    const  idRecipe  = req.params; //toma el valor de la propiedad id
     const origen = isNaN(idRecipe) ? "bdd" : "api"; //evaluación si id es numérico o no "NaN"
     
     try {
@@ -30,8 +31,8 @@ const getRecipeHandlerById = async (req, res) => {
 
 const createRecipeHandler = async (req, res) => {
     try {
-    const {  name, image, resumenPlato, nivelSaludable, pasoAPaso } = req.body;
-    const newRecipe = await  createRecipe(name, image, resumenPlato, nivelSaludable, pasoAPaso);
+    const {  name, summary, health, steps, image, newDiets } = req.body;
+    const newRecipe = await  createRecipe(name, summary, health, steps, image, newDiets);
     res.status(200).json({ newRecipe });
    } catch (error) {
     res.status(400).json({ error: error.message });
